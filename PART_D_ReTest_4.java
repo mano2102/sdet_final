@@ -14,7 +14,7 @@ import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 
-public class TestSample extends Base {
+public class TestRunner extends Base {
 
     @BeforeMethod
     public void launchBrowser() throws MalformedURLException {
@@ -26,23 +26,23 @@ public class TestSample extends Base {
     @Test
     public void testOne() throws IOException {
         // write or call ur pages here
-        String projectRoot = System.getProperty("user.dir");
-        // Folder path inside root
-        String folderPath = projectRoot + File.separator + "logs";
+        // String projectRoot = System.getProperty("user.dir");
+        // // Folder path inside root
+        // String folderPath = projectRoot + File.separator + "logs";
 
-        // Create folder
-        File folder = new File(folderPath);
+        // // Create folder
+        // File folder = new File(folderPath);
 
-        if (!folder.exists()) {
-            boolean created = folder.mkdir();
-            if (created) {
-                System.out.println("Folder created at: " + folderPath);
-            } else {
-                System.out.println("Failed to create folder");
-            }
-        } else {
-            System.out.println("Folder already exists");
-        }
+        // if (!folder.exists()) {
+        //     boolean created = folder.mkdir();
+        //     if (created) {
+        //         System.out.println("Folder created at: " + folderPath);
+        //     } else {
+        //         System.out.println("Failed to create folder");
+        //     }
+        // } else {
+        //     System.out.println("Folder already exists");
+        // }
 
         driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("Email009@email.com");
         driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("password@009");
